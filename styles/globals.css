@@ -17,3 +17,18 @@ h5,
 h6 {
   font-family: 'Lato', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  padding: 3rem 0rem;
+}

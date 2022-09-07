@@ -1,0 +1,122 @@
+[
+    {
+        "id":"0934wing4a",
+        "name":"Ethereum",
+        "shortName":"Ether",
+        "price":"1,582.33",
+        "image":"ethereum.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Vitalik Buterin",
+        "marketCap":"193,624,570,330",
+        "marketDominace":"20.27%"
+
+    },
+    {
+        "id":"0932w3rf4556g4a",
+        "name":"Bitcoin",
+        "shortName":"Ether",
+        "price":"18,981.45",
+        "image":"bitcoin.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Satoshi Nakamoto",
+        "marketCap":"363,959,799,446.17",
+        "marketDominace":"38.14%"
+
+    },
+    {
+        "id":"2q35f5fok45",
+        "name":"Tether",
+        "shortName":"Tether",
+        "price":"1.00",
+        "image":"tether.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Craig Sellars",
+        "marketCap":"67,550,633,725.43",
+        "marketDominace":"7.09%"
+
+    },
+    {
+        "id":"0p0k352584314",
+        "name":"USD Coin",
+        "shortName":"USDC",
+        "price":"1.00",
+        "image":"usdc.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Centre consortium",
+        "marketCap":"51,620,065,828.87",
+        "marketDominace":"5.50%"        
+
+    },
+    {
+        "id":"4309d57e2a57e",
+        "name":"XRP",
+        "shortName":"XRP",
+        "price":"0.3174",
+        "image":"xrp.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Chris Larsen",
+        "marketCap":"15,763,302,080.93",
+        "marketDominace":"1.68%"
+
+    },
+    {
+        "id":"545455h458674",
+        "name":"BNB Coin",
+        "shortName":"BNB",
+        "price":"263.35",
+        "image":"bnb.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Binance",
+        "marketCap":"42,471,953,131.47",
+        "marketDominace":"4.53%"
+
+    },
+    {
+        "id":"3454gr84384h43a",
+        "name":"Cardano",
+        "shortName":"ADA",
+        "price":"0.4593",
+        "image":"cardano.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"IOHK",
+        "marketCap":"15,695,430,012.09",
+        "marketDominace":"1.67%"
+
+    },
+    {
+        "id":"234g745232f6aaw",
+        "name":"Solana",
+        "shortName":"SOL",
+        "price":"1.91",
+        "image":"solana.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Vitalik Buterin",
+        "marketCap":"10,856,803,187.75",
+        "marketDominace":"1.16%"
+
+    },
+    {
+        "id":"2rc5a77414a0ca3",
+        "name":"Dogecoin",
+        "shortName":"DOGE",
+        "price":"0.05877",
+        "image":"doge.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Billy Markus",
+        "marketCap":"7,787,374,105.22",
+        "marketDominace":"0.83%"
+
+    },
+    {
+        "id":"aca4a74qca884774",
+        "name":"Polkadot",
+        "shortName":"DOT",
+        "price":"6.90",
+        "image":"polkadot.png",
+        "type":"CRYPTOCURRENCY",
+        "Developer":"Parity Technologies",
+        "marketCap":"7,688,040,495.14",
+        "marketDominace":"0.82%"
+
+    }
+]
