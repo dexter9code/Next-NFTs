@@ -1,0 +1,24 @@
+/* .key_feature__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5rem 0;
+} */
+.key_feature{
+    width: 50%;
+    vertical-align: top;
+    text-align: center;
+    margin: 0 auto;
+}
+.key_feature h1{
+   font-weight: bold;
+   font-size: 1.5rem;
+   text-transform: capitalize;
+}
+
+.about {
+    color: rgb(4, 9, 24);
+    font-size: 1rem; 
+    font-weight: 400;
+}
