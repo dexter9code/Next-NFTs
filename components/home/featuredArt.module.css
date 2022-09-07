@@ -1,0 +1,48 @@
+.featuredArt{
+    margin-top: 5rem ;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center ;
+    width: 100%;
+}
+
+
+.depth__clip{
+    position: absolute;
+    z-index: -1;
+    height: 2.5rem;
+    width: calc(100% - 0.5rem);
+    left: 0.25rem;
+    right: 0.25rem;
+    top: calc(100% - 0.5rem);
+    clip-path: polygon(0% 0%, 5% 100%, 95% 100%, 100% 0px);
+    background: linear-gradient(rgb(128, 236, 255) -5.71%, transparent 100%);
+}
+
+.featuredArt__content{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 4rem;
+}
+
+.featuredArt__title{
+    font-weight: bold;
+    font-size: 3rem;
+    text-transform: uppercase;
+    
+}
+.featuredArt__title span{
+    background: var(--next-teal);
+    padding: 1.5rem 0;
+    clip-path: polygon(0 15%, 100% 31%, 100% 82%, 0 68%);
+}
+
+.featuredArt__content h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.featuredArt__content p {
+    color: var(--next-grey);
+    font-weight: 600;
+}
