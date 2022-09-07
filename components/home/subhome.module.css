@@ -1,0 +1,22 @@
+.container{
+    margin: 5rem auto;
+    padding: 1 rem;
+}
+
+.content__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 2rem;
+    padding-right: 5rem;
+}
+
+.context {
+    padding:1.5rem 3rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}

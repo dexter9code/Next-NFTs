@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-around;
     margin-top: 5rem;
-    position: absolute;
     width: 100%;
 }
 
@@ -14,13 +13,10 @@
     justify-content: center;
 }
 .container__heading p{
-    position: relative;
-    top: 0.5rem;
-    left: 1.5rem;
     font-size: large;
     font-weight: 700;
     display: block;
-    margin-bottom: 2rem;
+    margin: 1.3rem 0rem;
 }
 
 .heading{
