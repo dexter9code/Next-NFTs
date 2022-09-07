@@ -1,7 +1,8 @@
+import Home from "./../components/home/Home";
 export default function StartingPage() {
   return (
     <div>
-      <h1>Starting Page</h1>
+      <Home />
     </div>
   );
 }

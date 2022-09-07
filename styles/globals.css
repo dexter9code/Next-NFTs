@@ -5,6 +5,8 @@
 }
 
 body {
+  --primary-color: #FF5349;
+  --secondary-color: #1e90ff;
   font-family: 'Open Sans', 'Lato', sans-serif;
   margin: 0;
 }
@@ -32,3 +34,4 @@ button {
   text-align: center;
   padding: 3rem 0rem;
 }
+

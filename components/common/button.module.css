@@ -1,0 +1,23 @@
+.btn{
+    font-family: DSemi, monospace;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.25rem;
+    font-size: 0.95rem;
+    width: fit-content;
+    background-color: rgb(20, 241, 149);
+    border-radius: 2.25rem;
+    padding: 0.875rem 1.5rem;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+.btn a{
+    color: black;
+}
+
+.btn__lift {
+    transition: all 0.4ms;
+}
