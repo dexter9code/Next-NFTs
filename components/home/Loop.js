@@ -31,7 +31,7 @@ const Loop = function (props) {
   return (
     <section className={styles.container}>
       <div className={styles.newsletter}>
-        <h1>Stay in the loop</h1>
+        <h1>Never miss a drop</h1>
         <p>
           Join our mailing list to stay in the loop with our newest feature
           releases, NFT drops, and tips and tricks for navigating Next-NFT.
@@ -49,7 +49,7 @@ const Loop = function (props) {
         </form>
       </div>
       <div className={styles.btn}>
-        <span className={styles.noselect}>Explore Market</span>
+        <button className={styles.noselect}>Explore Market</button>
       </div>
     </section>
   );

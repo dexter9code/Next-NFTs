@@ -5,6 +5,7 @@ import FeaturedArt from "./../components/home/FeaturedArt";
 import Loop from "../components/home/Loop";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NavBar from "./../components/navbar/Navbar";
 
 export default function StartingPage() {
   const notify = (message) => {
