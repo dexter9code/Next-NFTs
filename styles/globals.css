@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+:root{
+  --color-first: #65587f;
+  --color-second: #f18867;
+  --color-third: #e85f99;
+  --color-forth: #50bda1;
+  --block-width: 300px;
+  --block-height: 270px;
+  --border-width: 0.625rem;
+  --border-radius-outer: 8px;
+  --border-radius-inner: calc(var(--border-radius-outer) / 2);
+  --font-plain: "IBM Plex Sans", sans-serif;
+  --font-special: "Fredoka One", sans-serif;
+}
+
 body {
   --primary-color: #FF5349;
   --secondary-color: #1e90ff;
