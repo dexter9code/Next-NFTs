@@ -1,5 +1,6 @@
 import styles from "./loop.module.css";
 import { useRef } from "react";
+import Button1 from "./../common/Buttons/Button1";
 
 const Loop = function (props) {
   const emailRef = useRef();
@@ -48,9 +49,10 @@ const Loop = function (props) {
           </div>
         </form>
       </div>
-      <div className={styles.btn}>
+      <Button1 title={"Explore"} subTitle={`let'go`} />
+      {/* <div className={styles.btn}>
         <button className={styles.noselect}>Explore Market</button>
-      </div>
+      </div> */}
     </section>
   );
 };
