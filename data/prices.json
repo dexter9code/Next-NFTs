@@ -1,6 +1,5 @@
 [
     {
-        "id":"0934wing4a",
         "name":"Ethereum",
         "shortName":"Ether",
         "price":"1,582.33",
@@ -12,7 +11,6 @@
 
     },
     {
-        "id":"0932w3rf4556g4a",
         "name":"Bitcoin",
         "shortName":"Ether",
         "price":"18,981.45",
@@ -24,7 +22,6 @@
 
     },
     {
-        "id":"2q35f5fok45",
         "name":"Tether",
         "shortName":"Tether",
         "price":"1.00",
@@ -36,7 +33,7 @@
 
     },
     {
-        "id":"0p0k352584314",
+        
         "name":"USD Coin",
         "shortName":"USDC",
         "price":"1.00",
@@ -48,7 +45,7 @@
 
     },
     {
-        "id":"4309d57e2a57e",
+        
         "name":"XRP",
         "shortName":"XRP",
         "price":"0.3174",
@@ -60,7 +57,7 @@
 
     },
     {
-        "id":"545455h458674",
+        
         "name":"BNB Coin",
         "shortName":"BNB",
         "price":"263.35",
@@ -72,7 +69,7 @@
 
     },
     {
-        "id":"3454gr84384h43a",
+        
         "name":"Cardano",
         "shortName":"ADA",
         "price":"0.4593",
@@ -84,7 +81,7 @@
 
     },
     {
-        "id":"234g745232f6aaw",
+        
         "name":"Solana",
         "shortName":"SOL",
         "price":"1.91",
@@ -96,7 +93,7 @@
 
     },
     {
-        "id":"2rc5a77414a0ca3",
+        
         "name":"Dogecoin",
         "shortName":"DOGE",
         "price":"0.05877",
@@ -108,7 +105,7 @@
 
     },
     {
-        "id":"aca4a74qca884774",
+        
         "name":"Polkadot",
         "shortName":"DOT",
         "price":"6.90",

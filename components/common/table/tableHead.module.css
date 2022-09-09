@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.head_container__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head_container__item {
+    display: flex;
+    align-items: center;
+}
+
+.head_container__item__padding {
+    display: inline-block;
+    width: 20px;
+}
+
+.head_container__item_price__padding__front {
+    width: 8px;
+    display: inline-block;
+}
+.head_container__item_price__padding__back {
+    width: 2rem;
+    display: inline-block;
+}
+.head_container__item__market_padding{
+    width: 3rem;
+    display: inline-block;
+
+}
+
+.body_container__items {
+    box-sizing: border-box;
+    margin: 15px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body_container__item {
+    box-sizing: border-box;
+    margin: 0px 10px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body_container__item__logo {
+    height: 24px;
+    width: 24px;
+    margin-right: 7px;
+    border-radius: 12px
+}
+
+.body_container__item__content{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+.body_container__item__content span  {
+    margin-left: 10px;
+}
+.body_container__item__content p {
+    text-transform: capitalize;
+    font-weight: 600;
+    
+}
+
+.body__container__price span {
+    text-align: center;
+    font-weight: 600;
+    margin-right: 1.5rem;
+}
+
+.body__container__market_cap span{
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 15px;
+}
+.body__container__market_domiance span {
+    font-weight: 600;
+    margin-left: 2.5rem;
+}
+
+.body__container__graph__chart {
+    width: 164px;
+    height: 48px;
+    text-align: center;
+    box-sizing: content-box;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    filter: hue-rotate(300deg) saturate(210%) brightness(0.7) contrast(170%);
+}
