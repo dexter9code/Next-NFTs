@@ -1,0 +1,9 @@
+.card__container{
+
+    max-width: 120rem;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: repeat(4, 25rem);
+        grid-gap: 2rem;
+        justify-items: center;
+}

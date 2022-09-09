@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./../components/navbar/Navbar";
 import Button1 from "../components/common/Buttons/Button1";
+import AllNfts from "../components/allNfts/AllNfts";
 
 export default function StartingPage() {
   const notify = (message) => {
@@ -14,14 +15,15 @@ export default function StartingPage() {
   };
   return (
     <>
-      <div>
+      {/* <div>
         <Home />
         <SubHome />
         <AboutHome />
         <FeaturedArt />
         <Loop notification={notify} />
       </div>
-      <ToastContainer />
+      <ToastContainer /> */}
+      <AllNfts />
     </>
   );
 }

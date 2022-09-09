@@ -1,0 +1,197 @@
+.nft__profile {
+    position: relative;
+    margin-bottom: 50px;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    z-index: 1;
+    width: 275px;
+    margin: 1rem 2rem;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+    box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+}
+.nft__profile .nft__data {
+    position: relative;
+    z-index: 1;
+    border-radius: 15px 15px 0 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.nft__data img {
+    width: 110%;
+}
+
+.club_name {
+    transform: rotate(-90deg);
+    position: relative;
+    top: -0.5rem;
+    vertical-align: middle;
+}
+.club_name p {
+    position: relative;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.nft__profile .nft__data::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    width: 150%;
+    height: 80px;
+    bottom: -45px;
+    left: -25%;
+    content: "";
+    background-color: #ffffff;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(349deg);
+}
+@media only screen and (max-width: 575px) {
+    .nft__profile .nft__data::after {
+        height: 160px;
+        bottom: -90px;
+    }
+}
+.nft__profile .nft__data .social_info {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    right: 30px;
+    text-align: right;
+}
+.social_info img {
+    width: 13px;
+    margin-right: 10px;
+}
+.nft__profile__title{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    align-items: center;
+}
+.nft__profile__title img{
+    width: 10px;
+    margin-right: 0.5rem;
+}
+.nft__profile .nft__data .social_info span {
+    font-size: 14px;
+    color: #020710;
+    padding: 0 5px;
+}
+.nft__profile .nft__data .social_info span:hover,
+.nft__profile .nft__data .social_info span:focus {
+    color: #3f43fd;
+}
+.nft__profile .nft__data .social_info span:last-child {
+    padding-right: 0;
+}
+
+.nft__profile:hover .nft__price,
+.nft__profile:focus .nft__price{
+    transition-duration: 100ms;
+    color:white
+}
+
+.nft__profile .nft__profile__info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 25px 15px;
+    text-align: right;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    border-radius: 0 0 15px 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px -4px rgb(0 0 0 / 70%);
+}
+.nft__profile .nft__profile__info::after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: absolute;
+    z-index: 1;
+    width: 116px;
+    height: 3px;
+    background-color: #3f43fd;
+    content: "";
+    top: 12px;
+    right: 15px;
+}
+.nft__profile .nft__profile__info h6 {
+    margin-bottom: 0.25rem;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    color: var(--next-light-grey);
+    
+}
+
+.nft__profile__info span{
+    margin-right: 0.5rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: var(--next-light-grey);
+}
+
+.sale__img {
+    width: 5px; 
+    margin-right:  5px;
+}
+.nft__price{
+    margin-bottom:0  ;
+    position: relative;
+    top: 9px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .nft__profile .nft__profile__info h6 {
+        font-size: 14px;
+    }
+}
+.nft__profile .nft__profile__info section {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .nft__profile .nft__profile__info section {
+        font-size: 12px;
+    }
+}
+.nft__profile:hover .nft__data::after,
+.nft__profile:focus .nft__data::after {
+    background-color: #44c3e2;
+}
+.nft__profile:hover .nft__data .social_info span,
+.nft__profile:focus .nft__data .social_info span {
+    color: #ffffff;
+}
+.nft__profile:hover .nft__data .social_info span:hover,
+.nft__profile:hover .nft__data .social_info span:focus,
+.nft__profile:focus .nft__data .social_info span:hover,
+.nft__profile:focus .nft__data .social_info span:focus {
+    color: #ffffff;
+}
+.nft__profile:hover .nft__profile__info,
+.nft__profile:focus .nft__profile__info {
+    background-color: #44c3e2;
+}
+
+.nft__profile:hover .nft__profile__info::after,
+.nft__profile:focus .nft__profile__info::after {
+    background-color: #ffffff;
+}
+.nft__profile:hover .nft__profile__info h6,
+.nft__profile:focus .nft__profile__info h6 {
+    color: #ffffff;
+}
+.nft__profile:hover .nft__profile__info section,
+.nft__profile:focus .nft__profile__info section {
+    color: #ffffff;
+}

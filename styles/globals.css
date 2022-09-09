@@ -23,6 +23,7 @@ body {
   --secondary-color: #1e90ff;
   --next-teal:#20c997;
   --next-grey:#86b8b6;
+  --next-light-grey:rgb(112, 122, 131);
   font-family: 'Open Sans', 'Lato', sans-serif;
   margin: 0;
 }
