@@ -19,11 +19,18 @@ const DUMMY = [
 
 const AllNfts = function () {
   return (
-    <div className={styles.card__container}>
-      {DUMMY.map((item) => (
-        <NftCard key={item.id} nft={item} />
-      ))}
-    </div>
+    <section>
+      <div className={styles.title}>
+        <h1>
+          All lastest <span>Nfts</span> Drop
+        </h1>
+      </div>
+      <div className={styles.card__container}>
+        {DUMMY.map((item) => (
+          <NftCard key={item.id} nft={item} />
+        ))}
+      </div>
+    </section>
   );
 };
 
