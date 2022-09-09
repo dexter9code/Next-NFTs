@@ -2,11 +2,12 @@
 import styles from "./nftCard.module.css";
 
 const NftCard = function (props) {
-  const { title, image, lastSale, price } = props.nft;
+  const { title, image, lastsale, price } = props.nft;
+  const imagePath = `/assets/nft/${image}`;
   return (
     <div className={`${styles.nft__profile} ${styles.wow} ${styles.fadeInUp}`}>
       <div className={`${styles.nft__data}`}>
-        <img src={image} alt="image" />
+        <img src={imagePath} alt="image" />
         <div className={styles.social_info}>
           <span>{title}</span>
         </div>
@@ -23,7 +24,7 @@ const NftCard = function (props) {
               alt="svg"
               className={styles.sale__img}
             />
-            {lastSale}
+            {lastsale}
           </h6>
           <p className={styles.nft__price}>Price</p>
           <section className={styles.nft__profile__title}>
