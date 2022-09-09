@@ -1,0 +1,54 @@
+.title {
+    position: relative;
+    text-align: center;
+}
+
+.title h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+
+.title::after{
+    position: absolute;
+    right: 43rem;
+    top: 45px;  
+    z-index: 1;
+    width: 360px;
+    height: 3px;
+    background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);;
+    content: "";
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+
+}
+
+.title span{
+    background-color: #41dfff;
+    clip-path: polygon(0 21%, 100% 0, 100% 77%, 0 100%);
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.card__container{
+
+    max-width: 120rem;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: repeat(4, 25rem);
+        grid-gap: 2rem;
+        justify-items: center;
+}

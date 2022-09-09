@@ -9,7 +9,7 @@ const NftCard = function (props) {
       <div className={`${styles.nft__data}`}>
         <img src={imagePath} alt="image" />
         <div className={styles.social_info}>
-          <span>{title}</span>
+          <span className={styles.social_info__title}>{title}</span>
         </div>
       </div>
       <div className={styles.nft__profile__info}>

@@ -66,6 +66,12 @@
     width: 13px;
     margin-right: 10px;
 }
+
+.social_info__title {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
 .nft__profile__title{
     display: flex;
     justify-content: flex-end;
