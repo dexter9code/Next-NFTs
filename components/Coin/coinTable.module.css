@@ -1,6 +1,21 @@
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.container__title {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+}
+
+.container__title h1{
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-color: var(--next-teal);
 }
 
 .head_container__items {
@@ -28,7 +43,7 @@
     display: inline-block;
 }
 .head_container__item__market_padding{
-    width: 3rem;
+    width: 2.5rem;
     display: inline-block;
 
 }

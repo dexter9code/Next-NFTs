@@ -2,78 +2,66 @@
 import styles from "./coinTable.module.css";
 import TableHead from "./../common/table/TableHead";
 
-const DUMMY = [
-  {
-    id: 4564,
-    name: "Bitcoin BTC",
-    image: "/assets/bitcoin.png",
-    price: 455_442,
-    marketCap: 456_452_164,
-    marketDominace: "65%",
-    graph: "assets/bitcoin_sale.svg",
-  },
-  {
-    id: 4464,
-    name: "Bitcoin BTC",
-    image: "/assets/bitcoin.png",
-    price: 455_442,
-    marketCap: 456_452_164,
-    marketDominace: "65%",
-    graph: "assets/bitcoin_sale.svg",
-  },
-];
-
-const CoinTable = function (props) {
+const CoinTable = function ({ coins }) {
   return (
     <div className={styles.container}>
-      <table>
-        <TableHead />
-        <tbody>
-          {DUMMY.map((item) => (
-            <tr key={item.id}>
-              <td>
-                <div className={styles.body_container__items}>
-                  <div className={styles.body_container__item}>
-                    <img
-                      src={item.image}
-                      alt="bit coin"
-                      className={styles.body_container__item__logo}
-                    />
-                    <div className={styles.body_container__item__content}>
-                      <p>{item.name}</p>
-                      <span>BTC</span>
+      <div className={styles.container__title}>
+        <h1>Cryptocurrency Prices by Market Cap</h1>
+      </div>
+      <div>
+        <table>
+          <TableHead />
+          <tbody>
+            {coins.map((item) => {
+              const coinsImagePath = `/assets/crypto/${item.image}`;
+              const graphPath = `/assets/graph/${item.graph}`;
+              return (
+                <tr key={item._id}>
+                  <td>
+                    <div className={styles.body_container__items}>
+                      <div className={styles.body_container__item}>
+                        <img
+                          src={coinsImagePath}
+                          alt="bit coin"
+                          className={styles.body_container__item__logo}
+                        />
+                        <div className={styles.body_container__item__content}>
+                          <p>{item.name}</p>
+                          <span>{item.shortName}</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div className={styles.body__container__price}>
-                  <span>{item.price}</span>
-                </div>
-              </td>
-              <td>
-                <div className={styles.body__container__market_cap}>
-                  <span>{item.marketCap}</span>
-                </div>
-              </td>
-              <td>
-                <div className={styles.body__container__market_domiance}>
-                  <span>{item.marketDominace}</span>
-                </div>
-              </td>
-              <td>
-                <div>
-                  <img
-                    src={item.graph}
-                    alt="bit-coin_sale"
-                    className={styles.body__container__graph__chart}
-                  />
-                </div>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                  </td>
+                  <td>
+                    <div className={styles.body__container__price}>
+                      <span>{item.price}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div className={styles.body__container__market_cap}>
+                      <span>{item.marketCap}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div className={styles.body__container__market_domiance}>
+                      <span>{item.marketDominace}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <img
+                        src={graphPath}
+                        alt="bit-coin_sale"
+                        className={styles.body__container__graph__chart}
+                      />
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
