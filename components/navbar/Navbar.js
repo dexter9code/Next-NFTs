@@ -11,7 +11,7 @@ const NavBar = function (props) {
             <div className={styles.logo__container}>
               <div>
                 <Image
-                  src={"/assets/logo/NEXT NFTs-logos_transparent.png"}
+                  src={"/assets/logo/Next-NFTs-1.png"}
                   alt="next-image"
                   width={90}
                   height={90}

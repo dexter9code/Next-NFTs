@@ -1,7 +1,7 @@
 import _ from "lodash";
-import { connectionDb } from "../../helper/db-connection";
-import errorResponse from "./../../helper/ErrorResponse";
-import { hashedPassword } from "../../helper/checkInput";
+import { connectionDb } from "../../../helper/db-connection";
+import errorResponse from "../../../helper/ErrorResponse";
+import { hashedPassword } from "../../../helper/checkInput";
 
 const signup = async function (req, res) {
   if (req.method !== "POST") {

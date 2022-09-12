@@ -36,7 +36,7 @@ const Signup = function (props) {
 
     const reqBody = { name, email, password, confirmPassword };
 
-    const res = await fetch(`/api/signup`, {
+    const res = await fetch(`/api/auth/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
