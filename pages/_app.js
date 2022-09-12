@@ -1,4 +1,3 @@
-import { ToastContainer } from "react-toastify";
 import Layout from "../components/navbar/Layout";
 import "../styles/globals.css";
 

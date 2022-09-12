@@ -1,4 +1,5 @@
 import NavBar from "./Navbar";
+
 const Layout = function (props) {
   return (
     <>

@@ -16,15 +16,14 @@ export default function StartingPage() {
   };
   return (
     <>
-      {/* <div>
+      <div>
         <Home />
         <SubHome />
         <AboutHome />
         <FeaturedArt />
         <Loop notification={notify} />
       </div>
-      <ToastContainer /> */}
-      <CoinTable />
+      <ToastContainer />
     </>
   );
 }
