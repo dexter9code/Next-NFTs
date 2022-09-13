@@ -6,6 +6,7 @@ import Button3 from "./../common/Buttons/button3";
 
 const NavBar = function (props) {
   const { data, status } = useSession();
+  console.log(data);
 
   const logoutHandler = (e) => {
     e.preventDefault();

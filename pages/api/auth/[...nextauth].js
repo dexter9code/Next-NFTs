@@ -28,7 +28,10 @@ export default NextAuth({
         }
 
         await client.close();
-        return { userId: currentUser._id, name: currentUser.name };
+        return {
+          email: currentUser.role,
+          name: currentUser.name,
+        };
       },
     }),
   ],
