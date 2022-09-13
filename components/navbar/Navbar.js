@@ -1,10 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./navbar.module.css";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+import Button3 from "./../common/Buttons/button3";
 
 const NavBar = function (props) {
   const { data, status } = useSession();
+
+  const logoutHandler = (e) => {
+    e.preventDefault();
+    signOut();
+  };
 
   return (
     <header className={styles.container}>
@@ -29,14 +35,21 @@ const NavBar = function (props) {
       <nav>
         <ul className={styles.nav_container}>
           <li>
-            <Link href={"/"}>Explore</Link>
+            <Link href={"/allNfts"}>Explore</Link>
           </li>
-          <li>
-            <Link href={"/"}>Sign-In</Link>
-          </li>
+          {!data && (
+            <li>
+              <Link href={"/signin"}>Sign-In</Link>
+            </li>
+          )}
           {data && status === "authenticated" && (
             <li>
               <Link href={"/"}>{data.user.name}</Link>
+            </li>
+          )}
+          {data && status === "authenticated" && (
+            <li>
+              <Button3 title={"Logout"} onclick={logoutHandler} />
             </li>
           )}
         </ul>
