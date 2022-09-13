@@ -1,0 +1,19 @@
+.nft__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    margin-bottom: 5rem;
+}
+
+.form__control{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.nft__container button {
+    text-align: center;
+    margin-top: 2rem;
+}
