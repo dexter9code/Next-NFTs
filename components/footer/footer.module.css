@@ -15,7 +15,7 @@
 }
 
 .footer__logo img{
-    height: 5rem;
+    height: 6rem;
 }
 
 .footer__nav{
@@ -25,7 +25,10 @@
 }
 
 .footer__nav li {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     margin-left: 1.5rem;
+    color: #131313;
+  text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -3px 3px 1px #7f7d7d, -3px 2px 1px #828181, -3px 4px 1px #868585, 0px 1px 0px #8b8a89, -2px 6px 1px #8f8e8d, -3px 3px 1px #949392, -2px 3px 1px #999897, -3px 3px 1px #9e9c9c, -3px 3px 1px #a3a1a1, -3px 3px 1px #a8a6a6, -3px 3px 1px #adabab, -3px 0px 1px #b2b1b0, -3px 1px 1px #b7b6b5, -3px 4px 1px #bcbbba, -3px 1px 1px #c1bfbf, -3px 4px 1px #c6c4c4, -3px 3px 1px #cbc9c8, -3px 4px 1px #cfcdcd, -3px 5px 1px #d4d2d1, -3px 4px 1px #d8d6d5, -4px 5px 1px #dbdad9, -3px 5px 1px #dfdddc, -4px 2px 1px #e2e0df, -3px 3px 1px #e4e3e2;
 }
 
 .footer__copyright{

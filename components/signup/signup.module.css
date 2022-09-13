@@ -4,7 +4,7 @@
     flex-direction: row;
     height: 95vh;
     width: 100%;
-    background-color: #354152;
+    background-color: #151823;
     color: #7e8ba3;
   }
   .align__item--start {
@@ -14,8 +14,60 @@
     align-self: flex-end;
   }
   
+  
+.register {
+  position: relative;
+  color: #252B37;
+  background-color: #151823;
+  animation: textColor 10s ease infinite;
+}
+.register:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 5rem;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.75);
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  animation: animateGlow 10s ease infinite;
+}
+
+  @keyframes animateGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes textColor {
+    0% {
+      color: #7e0fff;
+    }
+    50% {
+      color: #0fffc1;
+    }
+    100% {
+      color: #7e0fff;
+    }
+  }
+
   .site__logo {
-    margin-bottom: 2rem;
+    width: 10rem;
+    top: -1rem;
+    left: 7.8rem;
+    position: absolute;
   }
   
   .form input {
@@ -31,6 +83,7 @@
   }
   .form input {
     outline: 0;
+    color: #f7f7f7;
     padding: 0.5rem 1rem;
   }
   .form input[type=email], .form input[type=password],.form input[type=text] {
@@ -47,7 +100,7 @@
     font-size: 2.75rem;
     font-weight: 100;
     margin: 0 0 1rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
   
  .form svg {
@@ -63,10 +116,13 @@
   .register {
     box-shadow: 0 0 250px #000;
     text-align: center;
-    padding: 4rem 2rem;
+    padding-top: 6rem;
+    padding-bottom: 1rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
   .register input {
-    border: 1px solid #242c37;
+    border: 1px solid #f7f7f7;
     border-radius: 999px;
     background-color: transparent;
     text-align: center;
@@ -83,11 +139,11 @@
     background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#242c37"><path d="M195.334 223.333h-50v-62.666c0-61.022 49.645-110.667 110.666-110.667 61.022 0 110.667 49.645 110.667 110.667v62.666h-50v-62.666c0-33.452-27.215-60.667-60.667-60.667-33.451 0-60.666 27.215-60.666 60.667v62.666zm208.666 30v208.667h-296v-208.667h296zm-121 87.667c0-14.912-12.088-27-27-27s-27 12.088-27 27c0 7.811 3.317 14.844 8.619 19.773 4.385 4.075 6.881 9.8 6.881 15.785v22.942h23v-22.941c0-5.989 2.494-11.708 6.881-15.785 5.302-4.93 8.619-11.963 8.619-19.774z"/></svg>');
   }
   .register button {
-    background-image: linear-gradient(160deg, #8ceabb 0%, #378f7b 100%);
+    background-image: linear-gradient(160deg, #dd5a44 0%, #e78877 100%);
     color: #fff;
     margin-bottom: 6rem;
     width: 100%;
     border-radius: 25px;
-    border-color: #8ceabb;
+    border-color: var(--next-orangered);
     padding: 8px;
   }
