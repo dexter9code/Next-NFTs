@@ -1,5 +1,5 @@
 import styles from "./home.module.css";
-import Button from "./../common/Button";
+import Button2 from "./../common/Buttons/Button2";
 
 const Home = function (props) {
   return (
@@ -15,8 +15,8 @@ const Home = function (props) {
             </p>
           </section>
           <div className={styles.button__container}>
-            <Button title={"Buy Master-Piece "} location={"/"} />
-            <Button title={"Crypto Coins"} location={"/"} />
+            <Button2 title={"Buy Master-Piece"} location={"/allNfts"} />
+            <Button2 title={"Explore-Coins"} location={"/coins"} />
           </div>
           <section className={styles.subHeading}>
             <p>

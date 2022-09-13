@@ -3,9 +3,11 @@ import styles from "./button.module.css";
 
 const Button = function ({ title, location }) {
   return (
-    <div className={styles.btn}>
-      <Link href={location}>{title}</Link>
-    </div>
+    <Link href={location}>
+      <a>
+        <div className={styles.btn}>{title}</div>
+      </a>
+    </Link>
   );
 };
 

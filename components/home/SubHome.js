@@ -17,7 +17,7 @@ const SubHome = function (props) {
             <br />
             around the world and verified NFTS to waiting for to be discorved.
           </p>
-          <Button title={"Join NEXT"} location={"/"} />
+          <Button title={"Join NEXT"} location={"/signup"} />
         </div>
       </div>
     </section>

@@ -5,10 +5,6 @@ import FeaturedArt from "./../components/home/FeaturedArt";
 import Loop from "../components/home/Loop";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import NavBar from "./../components/navbar/Navbar";
-import Button1 from "../components/common/Buttons/Button1";
-import AllNfts from "../components/allNfts/AllNfts";
-import CoinTable from "./../components/Coin/CoinTable";
 
 export default function StartingPage() {
   const notify = (message) => {
