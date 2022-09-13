@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./navbar.module.css";
+import { useSession } from "next-auth/react";
 
 const NavBar = function (props) {
+  const { data, status } = useSession();
+
   return (
     <header className={styles.container}>
       <div>
@@ -31,6 +34,11 @@ const NavBar = function (props) {
           <li>
             <Link href={"/"}>Sign-In</Link>
           </li>
+          {data && status === "authenticated" && (
+            <li>
+              <Link href={"/"}>{data.user.name}</Link>
+            </li>
+          )}
         </ul>
       </nav>
     </header>

@@ -1,15 +1,26 @@
+.full__container{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 91.8vh;
+}
+.background_cover {
+  background: url('../../public/assets/images/featured-ape.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 92%;
+  width: 100%;
+  z-index: -1;
+  filter: blur(4px);
+  position: absolute;
+}
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     /* background: linear-gradient(-45deg, #ee7752, #b69de6, #a2e5f5, #FAB2BC,#A5C1C4,#23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite; */
-    background: url('../../public/assets/images/featured-ape.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 91.8vh;
 }
 
 /* @keyframes gradient {
