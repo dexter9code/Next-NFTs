@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import styles from "./addData.module.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const AddData = function (props) {
   const titleRef = useRef();
@@ -29,7 +30,6 @@ const AddData = function (props) {
       lastsale: convertedLastSale,
       isFeatured: convertedFeatured,
     };
-    console.log(reqBody);
 
     const res = await fetch(`http://localhost:3000/api/admin/addData`, {
       method: "POST",
@@ -40,41 +40,46 @@ const AddData = function (props) {
     });
 
     const result = await res.json();
-    console.log(result);
+    if (result && result.status === "Success") {
+      toast.success(`Added Successfully to Database`);
+    }
   };
 
   return (
-    <div className={styles.nft__container}>
-      <div>
-        <h1>Add New Nft</h1>
+    <>
+      <Toaster />
+      <div className={styles.nft__container}>
+        <div>
+          <h1>Add New Nft</h1>
+        </div>
+        <form onSubmit={onSubmitHandler}>
+          <div className={styles.form__control}>
+            <label htmlFor="title">Title</label>
+            <input type={"text"} id="title" ref={titleRef} />
+          </div>
+          <div className={styles.form__control}>
+            <label htmlFor="price">Price</label>
+            <input type={"text"} id="price" ref={priceRef} />
+          </div>
+          <div className={styles.form__control}>
+            <label htmlFor="image">Image-As-String</label>
+            <input type={"text"} id="image" ref={imageRef} />
+          </div>
+          <div className={styles.form__control}>
+            <label htmlFor="lastsale">Last Sale</label>
+            <input type={"text"} id="lastsale" ref={lastSaleRef} />
+          </div>
+          <div className={styles.form__control}>
+            <label htmlFor="isFeatured">isFeatured</label>
+            <select id="isFeatured" ref={isFeaturedRef}>
+              <option value={"true"}>True</option>
+              <option value={"false"}>False</option>
+            </select>
+          </div>
+          <button>ADD-NFT</button>
+        </form>
       </div>
-      <form onSubmit={onSubmitHandler}>
-        <div className={styles.form__control}>
-          <label htmlFor="title">Title</label>
-          <input type={"text"} id="title" ref={titleRef} />
-        </div>
-        <div className={styles.form__control}>
-          <label htmlFor="price">Price</label>
-          <input type={"text"} id="price" ref={priceRef} />
-        </div>
-        <div className={styles.form__control}>
-          <label htmlFor="image">Image-As-String</label>
-          <input type={"text"} id="image" ref={imageRef} />
-        </div>
-        <div className={styles.form__control}>
-          <label htmlFor="lastsale">Last Sale</label>
-          <input type={"text"} id="lastsale" ref={lastSaleRef} />
-        </div>
-        <div className={styles.form__control}>
-          <label htmlFor="isFeatured">isFeatured</label>
-          <select id="isFeatured" ref={isFeaturedRef}>
-            <option value={"true"}>True</option>
-            <option value={"false"}>False</option>
-          </select>
-        </div>
-        <button>ADD-NFT</button>
-      </form>
-    </div>
+    </>
   );
 };
 
