@@ -1,8 +1,9 @@
 import Link from "next/link";
+import styles from "./svgCard.module.css";
 
-const SvgCard = function ({ location, title, svgName, svgId }) {
+const SvgCard = function ({ location, title, svgName, svgId, active }) {
   return (
-    <li>
+    <li className={active === true ? `${styles.side_nav__active}` : ""}>
       <Link href={location}>
         <a>
           <svg>

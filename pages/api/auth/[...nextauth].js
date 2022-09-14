@@ -29,8 +29,9 @@ export default NextAuth({
 
         await client.close();
         return {
-          email: currentUser.role,
+          email: currentUser.email,
           name: currentUser.name,
+          image: currentUser.role,
         };
       },
     }),

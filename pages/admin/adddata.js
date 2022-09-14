@@ -18,7 +18,7 @@ export async function getServerSideProps(context) {
     };
   }
 
-  if (session.user.email !== "admin") {
+  if (session.user.image !== "admin") {
     return {
       redirect: {
         destination: `/signin`,

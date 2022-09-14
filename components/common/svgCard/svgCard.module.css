@@ -1,0 +1,8 @@
+.side_nav__active,
+.side_nav li:hover {
+  border-left: 4px solid #fff !important;
+}
+.side_nav__active a {
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
