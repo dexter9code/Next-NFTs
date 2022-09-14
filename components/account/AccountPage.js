@@ -1,7 +1,6 @@
 import styles from "./accountPage.module.css";
 import SvgCard from "./../common/svgCard/SvgCard";
 import { useRef } from "react";
-import { getSession } from "next-auth/react";
 import sendReq from "./../../helper/send-Req";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -9,7 +8,7 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
   const nameRef = useRef();
   const currentPasswordRef = useRef();
   const newPasswordRef = useRef();
-  const confirmNewPassword = useRef();
+  const confirmNewPasswordRef = useRef();
 
   const onNameChangeHandler = async (e) => {
     e.preventDefault();
@@ -17,10 +16,35 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
     const name = nameRef.current.value;
     const reqBody = { email, name };
 
-    const response = await sendReq(`/api/edit/emailEdit`, "PATCH", reqBody);
+    try {
+      await sendReq(`/api/edit/emailEdit`, "PATCH", reqBody);
+      toast.success(`Successfully Changed`);
+    } catch (error) {
+      toast.error(`Server Down !`);
+      console.log(error.message);
+    }
+  };
 
-    toast.success(`Successfully Changed`);
-    console.log(response);
+  const onPasswordChangeHandler = async (e) => {
+    e.preventDefault();
+    const currentPassword = currentPasswordRef.current.value;
+    const newPassword = newPasswordRef.current.value;
+    const confirmPassword = confirmNewPasswordRef.current.value;
+
+    const reqBody = {
+      currentPassword,
+      newPassword,
+      confirmPassword,
+      email: userEmail,
+    };
+
+    try {
+      await sendReq(`/api/edit/passwordEdit`, "PATCH", reqBody);
+      toast.success(`Successfully Changed`);
+    } catch (error) {
+      toast.error(`Error Occured`);
+      console.log(error.message);
+    }
   };
 
   return (
@@ -40,14 +64,14 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                 />
                 <SvgCard
                   active={false}
-                  location={"/"}
+                  location={"/coins"}
                   title="Coins"
                   svgName={"bitcoin_money"}
                   svgId={"Layer_1"}
                 />
                 <SvgCard
                   active={false}
-                  location={"/"}
+                  location={"/featurednfts"}
                   title="featured"
                   svgName={"icons"}
                   svgId={"icon-star"}
@@ -80,7 +104,7 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                     />
                     <SvgCard
                       active={false}
-                      location={"/"}
+                      location={"/admin/adddata"}
                       title="Add Nfts"
                       svgName={"data_add"}
                       svgId={"data_1"}
@@ -143,7 +167,10 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                 >
                   Password change
                 </h2>
-                <form className={`${styles.form} ${styles.form_user_settings}`}>
+                <form
+                  className={`${styles.form} ${styles.form_user_settings}`}
+                  onSubmit={onPasswordChangeHandler}
+                >
                   <div className={styles.form__group}>
                     <label
                       className={styles.form__label}
@@ -157,7 +184,7 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                       type="password"
                       placeholder="••••••••"
                       required="required"
-                      minLength={8}
+                      ref={currentPasswordRef}
                     />
                   </div>
                   <div className={styles.form__group}>
@@ -170,7 +197,7 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                       type="password"
                       placeholder="••••••••"
                       required="required"
-                      minLength={8}
+                      ref={newPasswordRef}
                     />
                   </div>
                   <div className={`${styles.form__group} ${styles.ma_bt_lg}`}>
@@ -186,11 +213,12 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                       type="password"
                       placeholder="••••••••"
                       required="required"
-                      minLength={8}
+                      ref={confirmNewPasswordRef}
                     />
                   </div>
                   <div className={`${styles.form__group} ${styles.right}`}>
                     <button
+                      type="submit"
                       className={`${styles.btn} ${styles.btn__small} ${styles.btn__green}`}
                     >
                       Save password
