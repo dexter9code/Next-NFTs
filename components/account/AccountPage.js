@@ -97,7 +97,7 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                     />
                     <SvgCard
                       active={false}
-                      location={"/"}
+                      location={"/admin/usersData"}
                       title="Users"
                       svgName={"icons"}
                       svgId={"icon-users"}

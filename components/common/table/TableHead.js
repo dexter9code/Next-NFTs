@@ -1,59 +1,69 @@
 import styles from "./tableHead.module.css";
 
-const TableHead = function () {
+const TableHead = function ({ title1, title2, title3, title4, title5 }) {
   return (
     <thead>
       <tr>
-        <th>
-          <div className={styles.head_container__items}>
-            <div className={styles.head_container__item}>
-              <p>Name</p>
-              <span className={styles.head_container__item__padding}></span>
+        {title1 && (
+          <th>
+            <div className={styles.head_container__items}>
+              <div className={styles.head_container__item}>
+                <p>{title1}</p>
+                <span className={styles.head_container__item__padding}></span>
+              </div>
             </div>
-          </div>
-        </th>
-        <th>
-          <div className={styles.head_container__items}>
-            <div className={styles.head_container__item}>
-              <span
-                className={styles.head_container__item_price__padding__front}
-              ></span>
-              <p>price</p>
-              <span
-                className={styles.head_container__item_price__padding__back}
-              ></span>
+          </th>
+        )}
+        {title2 && (
+          <th>
+            <div className={styles.head_container__items}>
+              <div className={styles.head_container__item}>
+                <span
+                  className={styles.head_container__item_price__padding__front}
+                ></span>
+                <p>{title2}</p>
+                <span
+                  className={styles.head_container__item_price__padding__back}
+                ></span>
+              </div>
             </div>
-          </div>
-        </th>
-        <th>
-          <div className={styles.head_container__items}>
-            <div className={styles.head_container__item}>
-              <span
-                className={styles.head_container__item__market_padding}
-              ></span>
-              <p>Market Cap</p>
-              <span
-                className={styles.head_container__item__market_padding}
-              ></span>
+          </th>
+        )}
+        {title3 && (
+          <th>
+            <div className={styles.head_container__items}>
+              <div className={styles.head_container__item}>
+                <span
+                  className={styles.head_container__item__market_padding}
+                ></span>
+                <p>{title3}</p>
+                <span
+                  className={styles.head_container__item__market_padding}
+                ></span>
+              </div>
             </div>
-          </div>
-        </th>
-        <th>
-          <div className={styles.head_container__items}>
-            <div className={styles.head_container__item}>
-              <p>Market Domiance</p>
-              <span className={styles.head_container__item__padding}></span>
+          </th>
+        )}
+        {title4 && (
+          <th>
+            <div className={styles.head_container__items}>
+              <div className={styles.head_container__item}>
+                <p>{title4}</p>
+                <span className={styles.head_container__item__padding}></span>
+              </div>
             </div>
-          </div>
-        </th>
-        <th>
-          <div className={styles.head_container__items}>
-            <div className={styles.head_container__item}>
-              <span className={styles.head_container__item__padding}></span>
-              <p>Last 90 days</p>
+          </th>
+        )}
+        {title5 && (
+          <th>
+            <div className={styles.head_container__items}>
+              <div className={styles.head_container__item}>
+                <span className={styles.head_container__item__padding}></span>
+                <p>{title5}</p>
+              </div>
             </div>
-          </div>
-        </th>
+          </th>
+        )}
       </tr>
     </thead>
   );

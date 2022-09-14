@@ -10,7 +10,13 @@ const CoinTable = function ({ coins }) {
       </div>
       <div>
         <table>
-          <TableHead />
+          <TableHead
+            title1={`Name`}
+            title2={`Price`}
+            title3={`Market Cap`}
+            title4={`MarketDominace`}
+            title5={`Last 90 Day`}
+          />
           <tbody>
             {coins.map((item) => {
               const coinsImagePath = `/assets/crypto/${item.image}`;

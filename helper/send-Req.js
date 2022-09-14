@@ -6,7 +6,7 @@ const sendReq = async function (url, requestType, doc) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(doc),
+      body: doc ? JSON.stringify(doc) : null,
     });
 
     if (!res.ok) {

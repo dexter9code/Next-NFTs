@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 91vh;
+}
+
+.container__title {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+}
+
+.container__title h1{
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-color: var(--next-teal);
+}
+
+.head_container__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head_container__item {
+    display: flex;
+    align-items: center;
+}
+
+.head_container__item__padding {
+    display: inline-block;
+    width: 20px;
+}
+
+.head_container__item_price__padding__front {
+    width: 8px;
+    display: inline-block;
+}
+.head_container__item_price__padding__back {
+    width: 2rem;
+    display: inline-block;
+}
+.head_container__item__market_padding{
+    width: 2.5rem;
+    display: inline-block;
+
+}
+
+.body_container__items {
+    box-sizing: border-box;
+    margin: 15px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body_container__item {
+    box-sizing: border-box;
+    margin: 0px 10px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.body_container__item__logo {
+    height: 24px;
+    width: 24px;
+    margin-right: 7px;
+    border-radius: 12px
+}
+
+.body_container__item__content{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+.body_container__item__content span  {
+    margin-left: 10px;
+}
+.body_container__item__content p {
+    text-transform: capitalize;
+    font-weight: 600;
+    
+}
+
+.body__container__price span {
+    text-align: center;
+    font-weight: 600;
+    margin-right: 1.5rem;
+}
+
+.body__container__market_cap{
+    position: relative;
+    
+}
+.body__container__market_cap span{
+    text-align: center;
+    position: absolute;
+    font-weight: 600;
+    font-size: 15px;
+    left: 48px;
+    top: -13px;
+
+}
+.body__container__market_domiance span {
+    font-weight: 600;
+    margin-left: 2.5rem;
+}
+
+.body__container__graph__chart {
+    width: 164px;
+    height: 48px;
+    text-align: center;
+    box-sizing: content-box;
+    padding-top: 15px;
+    padding-bottom: 3px;
+    padding-right: 15px;
+}
+
+.body__container__graph__chart button {
+    background-color: red;
+    border-radius: 10%;
+    border-color: beige;
+    padding: 5px;
+    color: #f7f7f7;
+}
+
+.body__container__graph__chart button:hover{
+    background-color: rgb(224, 58, 58);
+    
+}

@@ -44,7 +44,7 @@ const NavBar = function (props) {
           )}
           {data && status === "authenticated" && (
             <li>
-              <Link href={"/"}>{data.user.name}</Link>
+              <Link href={"/account"}>{data.user.name}</Link>
             </li>
           )}
           {data && status === "authenticated" && (
