@@ -151,7 +151,7 @@
       from(#7dd56f),
       to(#28b487)
     );
-    background-image: linear-gradient(to right, #7dd56f, #28b487);
+    background-image: linear-gradient(to right, #dd5a44, #f05969, #fa5f91, #fb6dba, #f081e2);
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 0.1rem;
@@ -255,7 +255,7 @@
 
 .btn:focus {
   outline: none;
-  background-color: #2e864b;
+  background-color: var(--next-orangered);
 }
 
 .btn__white {
@@ -267,11 +267,11 @@
 }
 
 .btn__green {
-  background-color: #55c57a;
+  background-color: var(--next-orangered);
   color: #fff;
 }
 .btn__green::after {
-  background-color: #55c57a;
+  background-color: var(--next-orangered);
 }
 
 .btn__small {

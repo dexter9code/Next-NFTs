@@ -14,7 +14,7 @@ const NftCard = function (props) {
       </div>
       <div className={styles.nft__profile__info}>
         <div className={styles.club_name}>
-          <p>FatRat Mafia </p>
+          <p>Next NFTs </p>
         </div>
         <div>
           <h6>

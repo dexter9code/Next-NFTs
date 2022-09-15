@@ -1,9 +1,19 @@
 import { connectionDb } from "../../../helper/db-connection";
 import errorResponse from "../../../helper/ErrorResponse";
 import { pick } from "lodash";
+import { getSession } from "next-auth/react";
 
 const getUsersHandler = async function (req, res) {
   if (req.method === "GET") {
+    const session = getSession({ req });
+    if (!session && session.user.image !== "admin") {
+      res.status(401).json({
+        status: `Error`,
+        message: `Not-Authenticated `,
+      });
+      return;
+    }
+
     let client;
 
     try {
@@ -26,6 +36,15 @@ const getUsersHandler = async function (req, res) {
     }
     await client.close();
   } else if (req.method === "DELETE") {
+    const session = getSession({ req });
+    if (!session && session.user.image !== "admin") {
+      res.status(401).json({
+        status: `Error`,
+        message: `Not-Authenticated `,
+      });
+      return;
+    }
+
     const { email } = pick(req.body, "email");
 
     if (email === "admin@io.com") {

@@ -78,7 +78,7 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                 />
                 <SvgCard
                   active={false}
-                  location={"/"}
+                  location={"#"}
                   title="E-wallet"
                   svgName={"crypto_wallet"}
                   svgId={"crypto_1"}
@@ -90,7 +90,7 @@ const AccountPage = function ({ userName, userEmail, userRole }) {
                   <ul className={styles.side_nav}>
                     <SvgCard
                       active={false}
-                      location={"/"}
+                      location={"#"}
                       title="NFTs"
                       svgName={"nft_icon"}
                       svgId={"nft_1"}

@@ -24,6 +24,20 @@ async function handler(req, res) {
       return;
     }
 
+    const exisitingUser = await client
+      .db("nft")
+      .collection("loopEmail")
+      .findOne({ email });
+
+    if (exisitingUser) {
+      res.status(400).json({
+        status: `Failed`,
+        message: `Email already registered thank you`,
+      });
+      await client.close();
+      return;
+    }
+
     try {
       await insertIntoDocument(client, "loopEmail", { email });
     } catch (error) {

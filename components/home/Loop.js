@@ -22,7 +22,7 @@ const Loop = function (props) {
       body: JSON.stringify({ email }),
     });
     if (!res.ok) {
-      return console.log("error");
+      return toast.error(`Email already Subscribed`);
     }
     await res.json();
     toast(`Thank you`, {

@@ -1,10 +1,20 @@
 import errorResponse from "./../../../helper/ErrorResponse";
 import { pick } from "lodash";
 import { connectionDb } from "../../../helper/db-connection";
+import { getSession } from "next-auth/react";
 
 const handler = async function (req, res) {
   if (req.method !== "PATCH") {
     errorResponse(res, 400, `Can't handle this request`);
+    return;
+  }
+
+  const session = getSession({ req });
+  if (!session) {
+    res.status(401).json({
+      status: `Error`,
+      message: `Not-Authenticated `,
+    });
     return;
   }
 

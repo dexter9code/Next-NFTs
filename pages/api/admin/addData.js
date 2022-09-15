@@ -1,10 +1,20 @@
 import errorResponse from "./../../../helper/ErrorResponse";
 import _ from "lodash";
 import { connectionDb } from "../../../helper/db-connection";
+import { getSession } from "next-auth/react";
 
 const addData = async function (req, res) {
   if (req.method !== "POST") {
     errorResponse(res, 400, `Can't handle this type request`);
+    return;
+  }
+
+  const session = getSession({ req });
+  if (!session && session.user.image !== "admin") {
+    res.status(401).json({
+      status: `Error`,
+      message: `Not-Authenticated `,
+    });
     return;
   }
 

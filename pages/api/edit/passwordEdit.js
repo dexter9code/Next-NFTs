@@ -3,10 +3,20 @@ import { pick } from "lodash";
 import { connectionDb } from "../../../helper/db-connection";
 import { checkPassword } from "../../../helper/checkInput";
 import { hashedPassword } from "./../../../helper/checkInput";
+import { getSession } from "next-auth/react";
 
 const passwordHandler = async function (req, res) {
   if (req.method !== "PATCH") {
     errorResponse(res, 400, `Can't handle this type request`);
+    return;
+  }
+
+  const session = getSession({ req });
+  if (!session) {
+    res.status(401).json({
+      status: `Error`,
+      message: `Not-Authenticated `,
+    });
     return;
   }
 

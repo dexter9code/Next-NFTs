@@ -4,12 +4,14 @@ import { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 import styles from "./signup.module.css";
+import { useRouter } from "next/router";
 
 const Signup = function (props) {
   const emailRef = useRef();
   const userNameRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
+  const router = useRouter();
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -49,7 +51,7 @@ const Signup = function (props) {
     const data = await res.json();
 
     if (data.status === "Error") {
-      return console.log("error");
+      return toast.error(`Server are down`);
     }
 
     toast.success(`Account Created`);
@@ -58,7 +60,7 @@ const Signup = function (props) {
     passwordRef.current.value = "";
     confirmPasswordRef.current.value = "";
 
-    console.log(data);
+    router.replace(`/`);
   };
 
   return (
