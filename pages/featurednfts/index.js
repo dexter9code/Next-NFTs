@@ -1,4 +1,5 @@
 import HeadComp from "../../components/common/HeadComp";
+import { connectionDb } from "../../helper/db-connection";
 import FeaturedNft from "./../../components/featuredNfts/FeaturedNft";
 
 const FeaturedNfts = function (props) {
@@ -13,9 +14,11 @@ const FeaturedNfts = function (props) {
 export default FeaturedNfts;
 
 export async function getStaticProps(context) {
-  const res = await fetch(`http://localhost:3000/api/getallNfts`);
-  const data = await res.json();
-  const featuredData = data.data.filter((item) => item.isFeatured);
+  const client = await connectionDb();
+  const db = client.db();
+  const data = await db.collection("nft-collection").find().toArray();
+  const unFilteredData = JSON.parse(JSON.stringify(data));
+  const featuredData = unFilteredData.filter((item) => item.isFeatured);
 
   return {
     props: {

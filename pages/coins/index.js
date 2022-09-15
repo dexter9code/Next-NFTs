@@ -13,10 +13,9 @@ const Coins = function (props) {
 
 export default Coins;
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const res = await fetch(`http://localhost:3000/api/getCoins`);
   const coinsData = await res.json();
-  console.log(coinsData.data);
 
   return {
     props: {
