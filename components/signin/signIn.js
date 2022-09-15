@@ -1,4 +1,5 @@
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/router";
 import { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import styles from "./singIn.module.css";
@@ -7,6 +8,7 @@ const SignIn = function (props) {
   const emailRef = useRef();
   const passwordRef = useRef();
 
+  const router = useRouter();
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
@@ -26,6 +28,7 @@ const SignIn = function (props) {
 
     emailRef.current.value = "";
     passwordRef.current.value = "";
+    router.back();
   };
 
   return (
