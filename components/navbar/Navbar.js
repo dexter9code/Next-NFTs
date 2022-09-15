@@ -35,7 +35,7 @@ const NavBar = function (props) {
       <nav>
         <ul className={styles.nav_container}>
           <li>
-            <Link href={"/allNfts"}>Explore</Link>
+            <Link href={"/featurednfts"}>Featured</Link>
           </li>
           {!data && (
             <li>

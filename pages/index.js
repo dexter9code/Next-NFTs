@@ -3,14 +3,8 @@ import SubHome from "./../components/home/SubHome";
 import AboutHome from "./../components/home/AboutHome";
 import FeaturedArt from "./../components/home/FeaturedArt";
 import Loop from "../components/home/Loop";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Button3 from "./../components/common/Buttons/button3";
 
 export default function StartingPage() {
-  const notify = (message) => {
-    toast(message);
-  };
   return (
     <>
       <div>
@@ -18,9 +12,8 @@ export default function StartingPage() {
         <SubHome />
         <AboutHome />
         <FeaturedArt />
-        <Loop notification={notify} />
+        <Loop />
       </div>
-      <ToastContainer />
     </>
   );
 }

@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import styles from "./nftCard.module.css";
 
 const NftCard = function (props) {
@@ -7,7 +7,7 @@ const NftCard = function (props) {
   return (
     <div className={`${styles.nft__profile} ${styles.wow} ${styles.fadeInUp}`}>
       <div className={`${styles.nft__data}`}>
-        <img src={imagePath} alt="image" />
+        <Image src={imagePath} alt="nft_art_image" width={400} height={400} />
         <div className={styles.social_info}>
           <span className={styles.social_info__title}>{title}</span>
         </div>
@@ -19,17 +19,24 @@ const NftCard = function (props) {
         <div>
           <h6>
             <span>last sale:</span>
-            <img
+            <Image
               src="/assets/svg/ethereum-1.svg"
               alt="svg"
               className={styles.sale__img}
+              width={10}
+              height={10}
             />
             {lastsale}
           </h6>
           <p className={styles.nft__price}>Price</p>
           <section className={styles.nft__profile__title}>
             <div>
-              <img src="/assets/svg/ethereum-1.svg" alt="svg" />
+              <Image
+                src="/assets/svg/ethereum-1.svg"
+                alt="svg"
+                width={20}
+                height={20}
+              />
             </div>
             <p>{price}</p>
           </section>
