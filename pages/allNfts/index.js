@@ -1,7 +1,13 @@
+import HeadComp from "../../components/common/HeadComp";
 import AllNfts from "./../../components/allNfts/AllNfts";
 
 const NftList = function (props) {
-  return <AllNfts data={props.nfts} />;
+  return (
+    <>
+      <HeadComp title={`Explore Collectibles NFTs | Next-NFTs`} />
+      <AllNfts data={props.nfts} />
+    </>
+  );
 };
 
 export default NftList;

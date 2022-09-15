@@ -1,9 +1,15 @@
 import UserInfo from "./../../components/Users/userInfo";
 import sendReq from "./../../helper/send-Req";
 import { getSession } from "next-auth/react";
+import HeadComp from "../../components/common/HeadComp";
 
 const UserData = function (props) {
-  return <UserInfo users={props.users} />;
+  return (
+    <>
+      <HeadComp title={`Admin DashBoard | Next-NFTs`} />
+      <UserInfo users={props.users} />
+    </>
+  );
 };
 
 export default UserData;

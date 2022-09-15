@@ -1,7 +1,13 @@
+import HeadComp from "../../components/common/HeadComp";
 import FeaturedNft from "./../../components/featuredNfts/FeaturedNft";
 
 const FeaturedNfts = function (props) {
-  return <FeaturedNft data={props.nfts} />;
+  return (
+    <>
+      <HeadComp title={`Explore Featured NFTs | Next-NFTs`} />
+      <FeaturedNft data={props.nfts} />
+    </>
+  );
 };
 
 export default FeaturedNfts;
