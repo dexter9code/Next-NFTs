@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 import styles from "./signup.module.css";
 import { useRouter } from "next/router";
+import { signIn } from "next-auth/react";
 
 const Signup = function (props) {
   const emailRef = useRef();
@@ -54,7 +55,20 @@ const Signup = function (props) {
       return toast.error(`Server are down`);
     }
 
-    toast.success(`Account Created`);
+    if (data.status === `Success`) {
+      const result = await signIn("credentials", {
+        redirect: false,
+        email,
+        password,
+      });
+
+      if (result.error) {
+        toast.error(`Error while creating Account`);
+        return;
+      }
+      toast.success(`Account Created`);
+    }
+
     emailRef.current.value = "";
     userNameRef.current.value = "";
     passwordRef.current.value = "";

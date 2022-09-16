@@ -58,6 +58,7 @@ const signup = async function (req, res) {
     res.status(201).json({
       status: `Success`,
       message: `Added successfully`,
+      data: user,
     });
   } catch (error) {
     errorResponse(res, 500, error.message);
