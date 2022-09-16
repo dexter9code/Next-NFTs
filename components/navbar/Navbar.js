@@ -12,18 +12,20 @@ const NavBar = function (props) {
     signOut();
   };
 
+  const nameFiltered = data?.user.name.split(" ")[0];
+
   return (
     <header className={styles.container}>
       <div>
         <Link href={"/"}>
           <a>
             <div className={styles.logo__container}>
-              <div>
+              <div className={styles.image__container}>
                 <Image
-                  src={"/assets/logo/Next-NFTs-1.png"}
+                  src={"/assets/logo/next_nft_resize.png"}
                   alt="next-image"
-                  width={90}
-                  height={90}
+                  width={100}
+                  height={100}
                 />
               </div>
               <p>NEXT-NFTs</p>
@@ -44,7 +46,7 @@ const NavBar = function (props) {
           )}
           {data && status === "authenticated" && (
             <li>
-              <Link href={"/account"}>{data.user.name}</Link>
+              <Link href={"/account"}>{nameFiltered}</Link>
             </li>
           )}
           {data && status === "authenticated" && (
