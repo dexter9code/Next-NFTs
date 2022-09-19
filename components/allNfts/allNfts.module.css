@@ -12,8 +12,8 @@
 
 .title::after{
     position: absolute;
-    width: 345px;
-    right: 43.5rem;
+    width: 380px;
+    right: 47.5rem;
     top: 45px;
     z-index: 1;
     height: 3px;
@@ -47,7 +47,10 @@
 .card__container{
 
     max-width: 120rem;
-        margin: 2rem 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 7rem;
+        margin-right: 1rem;
         display: grid;
         grid-template-columns: repeat(4, 25rem);
         grid-gap: 2rem;

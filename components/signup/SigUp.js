@@ -48,7 +48,6 @@ const Signup = function (props) {
       },
       body: JSON.stringify(reqBody),
     });
-
     const data = await res.json();
 
     if (data.status === "Error") {

@@ -40,7 +40,7 @@ const CoinTable = function ({ coins }) {
                   </td>
                   <td>
                     <div className={styles.body__container__price}>
-                      <span>{item.price}</span>
+                      <span>${item.price}</span>
                     </div>
                   </td>
                   <td>
