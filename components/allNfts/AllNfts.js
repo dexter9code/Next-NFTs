@@ -14,6 +14,7 @@ const AllNfts = function ({ data }) {
           <NftCard key={item._id} nft={item} />
         ))}
       </div>
+      {/* need to change this later */}
     </section>
   );
 };
